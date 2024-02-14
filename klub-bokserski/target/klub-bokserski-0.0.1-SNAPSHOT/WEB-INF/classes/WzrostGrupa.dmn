@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="Definitions_0a00frm" name="DRD" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="WzrostGrupa" name="WzrostGrupa">
+    <decisionTable id="decisionTable_1">
+      <input id="input_1" label="Wzrost">
+        <inputExpression id="inputExpression_1" typeRef="long">
+          <text>wzrost</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_00h7khg" label="Kategoria">
+        <inputExpression id="LiteralExpression_0h2hezo" typeRef="string">
+          <text>kategoria</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Grupa" name="grupa" typeRef="string" />
+      <rule id="DecisionRule_0fc2019">
+        <inputEntry id="UnaryTests_0x9ezm3">
+          <text>&lt;= 180</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1flf4c2">
+          <text>"lekka"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zf5cp5">
+          <text>"a"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hzntgb">
+        <inputEntry id="UnaryTests_1kgosyn">
+          <text>&gt; 180</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tt1y6t">
+          <text>"lekka"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0k0equj">
+          <text>"b"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1k14luu">
+        <inputEntry id="UnaryTests_1glt51w">
+          <text>&lt;= 180</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0huh5vr">
+          <text>"srednia"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gl7flv">
+          <text>"c"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1f3yi2v">
+        <inputEntry id="UnaryTests_1jo65ka">
+          <text>&gt; 180</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14g2s94">
+          <text>"srednia"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zrd0iu">
+          <text>"d"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01xe48j">
+        <inputEntry id="UnaryTests_1kjip3s">
+          <text>&lt;= 180</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q4j82c">
+          <text>"ciezka"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y63twb">
+          <text>"e"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hcxg7v">
+        <inputEntry id="UnaryTests_11y3kcn">
+          <text>&gt; 180</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q7wti9">
+          <text>"ciezka"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vktsmf">
+          <text>"f"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

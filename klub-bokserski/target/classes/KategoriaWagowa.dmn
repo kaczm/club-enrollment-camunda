@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="Definitions_07evsnb" name="DRD" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="KategoriaWagowa" name="KategoriaWagowa">
+    <decisionTable id="decisionTable_1">
+      <input id="InputClause_1s69tqt" label="Waga">
+        <inputExpression id="LiteralExpression_19v6sau" typeRef="long">
+          <text>waga</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Kategoria" name="kategoria" typeRef="string" />
+      <output id="OutputClause_1xbnsgy" label="Czy dobra waga?" name="czy_dobra_waga" typeRef="boolean" />
+      <rule id="DecisionRule_1b4eqnd">
+        <inputEntry id="UnaryTests_0h2p41c">
+          <text>&lt;= 55</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1k39zdv">
+          <text>"za lekka"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c99nnp">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0m8yrlm">
+        <inputEntry id="UnaryTests_01b5mkn">
+          <text>]55..65]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1obvask">
+          <text>"lekka"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00rg6cv">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0epjn2c">
+        <inputEntry id="UnaryTests_0y7uidy">
+          <text>]65..75]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1eo14c9">
+          <text>"srednia"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16r55vf">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fv6p2c">
+        <inputEntry id="UnaryTests_0xevyam">
+          <text>]75..90]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1x3d2m2">
+          <text>"ciezka"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ljirfj">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0u7g12i">
+        <inputEntry id="UnaryTests_0p21h0q">
+          <text>&gt; 90</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0skeuqn">
+          <text>"za ciezka"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01zgdng">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
